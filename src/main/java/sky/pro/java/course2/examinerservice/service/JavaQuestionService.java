@@ -27,6 +27,14 @@ public class JavaQuestionService implements QuestionService {
     }
 
     @Override
+    public Question find(Question question) {
+        return questions.stream()
+                .filter(q -> q.equals(question))
+                .findFirst()
+                .orElseThrow(QuestionNotFoundException::new);
+    }
+
+    @Override
     public Question remove(Question question) {
         if (!questions.contains(question)) {
             throw new QuestionNotFoundException();

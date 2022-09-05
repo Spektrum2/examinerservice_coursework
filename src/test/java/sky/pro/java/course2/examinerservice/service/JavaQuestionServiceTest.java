@@ -35,6 +35,13 @@ class JavaQuestionServiceTest {
     }
 
     @Test
+    void findTest() {
+        Question actual = new Question("Каким словом называли в древние времена водяные часы?", "Клепсидра");
+        Question expected = new Question("Каким словом называли в древние времена водяные часы?", "Клепсидра");
+        assertThat(out.find(actual)).isEqualTo(expected);
+    }
+
+    @Test
     void removeTest() {
         Question actual = new Question("Каким словом называли в древние времена водяные часы?", "Клепсидра");
         Question expected = new Question("Каким словом называли в древние времена водяные часы?", "Клепсидра");
@@ -64,6 +71,7 @@ class JavaQuestionServiceTest {
         Question question = new Question("Чем известен Герострат?", "Сжёг храм Артемиды Эфесской");
         assertThatExceptionOfType(QuestionAnswerSameException.class).isThrownBy(() -> out.add("Каким словом называли в древние времена водяные часы?", "Каким словом называли в древние времена водяные часы?"));
         assertThatExceptionOfType(QuestionAlreadyAddedException.class).isThrownBy(() -> out.add("Каким словом называли в древние времена водяные часы?", "Клепсидра"));
+        assertThatExceptionOfType(QuestionNotFoundException.class).isThrownBy(() -> out.find(question));
         assertThatExceptionOfType(QuestionNotFoundException.class).isThrownBy(() -> out.remove(question));
     }
 

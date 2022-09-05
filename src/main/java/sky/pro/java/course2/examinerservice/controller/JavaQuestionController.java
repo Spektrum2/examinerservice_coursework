@@ -28,6 +28,12 @@ public class JavaQuestionController {
         return questionService.add(question, answer);
     }
 
+    @GetMapping("/find")
+    public Question findQuestion(@RequestParam("question") String question, @RequestParam("answer") String answer) {
+        Question question1 = new Question(question, answer);
+        return questionService.find(question1);
+    }
+
     @GetMapping("/remove")
     public Question removeQuestion(@RequestParam("question") String question, @RequestParam("answer") String answer) {
         Question question1 = new Question(question, answer);
