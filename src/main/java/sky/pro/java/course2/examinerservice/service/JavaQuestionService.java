@@ -5,13 +5,18 @@ import sky.pro.java.course2.examinerservice.domain.Question;
 import sky.pro.java.course2.examinerservice.exceptions.QuestionAlreadyAddedException;
 import sky.pro.java.course2.examinerservice.exceptions.QuestionAnswerSameException;
 import sky.pro.java.course2.examinerservice.exceptions.QuestionNotFoundException;
+import sky.pro.java.course2.examinerservice.repository.JavaQuestionRepository;
 
 import java.util.*;
 
-@Service
+@Service("javaQuestion")
 public class JavaQuestionService implements QuestionService {
 
-    private final Set<Question> questions = new HashSet<>();
+    private final JavaQuestionRepository javaQuestionRepository;
+
+    public JavaQuestionService(JavaQuestionRepository javaQuestionRepository) {
+        this.javaQuestionRepository = javaQuestionRepository;
+    }
 
     @Override
     public Question add(String question, String answer) {
@@ -19,53 +24,81 @@ public class JavaQuestionService implements QuestionService {
         if (question.equals(answer)) {
             throw new QuestionAnswerSameException();
         }
-        if (questions.contains(question1)) {
+        if (javaQuestionRepository.getAll().contains(question1)) {
             throw new QuestionAlreadyAddedException();
         }
-        questions.add(question1);
-        return question1;
+
+        return javaQuestionRepository.add(question1);
     }
 
     @Override
     public Question find(Question question) {
-        return questions.stream()
-                .filter(q -> q.equals(question))
-                .findFirst()
-                .orElseThrow(QuestionNotFoundException::new);
+        if (!javaQuestionRepository.getAll().contains(question)) {
+            throw new QuestionNotFoundException();
+        }
+        return javaQuestionRepository.find(question);
     }
 
     @Override
     public Question remove(Question question) {
-        if (!questions.contains(question)) {
+        if (!javaQuestionRepository.getAll().contains(question)) {
             throw new QuestionNotFoundException();
         }
-        questions.remove(question);
-        return question;
+        return javaQuestionRepository.remove(question);
     }
 
     @Override
     public Collection<Question> getAll() {
-        return questions;
+        return javaQuestionRepository.getAll();
     }
 
     @Override
     public Question getRandomQuestion() {
         Random random = new Random();
         List<Question> questionsRandom = new ArrayList<>(List.of(
-                new Question("Как называется самая известная смотровая площадка Москвы?", "Воробьёвы горы"),
-                new Question("Что было создано благодаря грибам-плесени?", "Пенициллин"),
-                new Question("Что в море является ориентиром для моряка? ", "Полярная звезда"),
-                new Question("Назовите страну с самой высокой продолжительностью жизни.", "Китай"),
-                new Question("Как звали маму Македонского?", "Олимпиада"),
-                new Question("Чем известен Герострат?", "Сжёг храм Артемиды Эфесской"),
-                new Question("Какую вершину сложно покорить?", "Вершину Эвереста"),
-                new Question("Как называется линия, у которой нет концов?", "Луч"),
-                new Question("Каким словом называли в древние времена водяные часы?", "Клепсидра"),
-                new Question("На какой вопрос не могу получить ответ Гамлет?", "Быть или не быть?")
+                new Question(
+                        "Как правильно организовать доступ к полям класса?",
+                        "Модификатор доступа — private. Доступ через методы get, set."
+                ),
+                new Question(
+                        "Дайте определение понятию метод",
+                        "Метод — это последовательность команд, которые вызываются по определенному имени."
+                ),
+                new Question(
+                        "Что такое итерация цикла?",
+                        "Это одноразовое выполнение кода, размещенного в теле цикла"),
+                new Question(
+                        "Какие циклы вы знаете?",
+                        "for, while, do-while, for-each"
+                ),
+                new Question(
+                        "Какой оператор используется для немедленной остановки цикла?",
+                        "break;"
+                ),
+                new Question(
+                        "Какой оператор используется для перехода к следующей итерации цикла?",
+                        "continue;"
+                ),
+                new Question(
+                        "Какие данные могут хранить коллекции?",
+                        "Коллекции могут хранить любые ссылочные типы данных."
+                ),
+                new Question(
+                        "Что будет, если в Map положить два значения с одинаковым ключом?",
+                        "Последнее значение перезапишет предыдущее."
+                ),
+                new Question(
+                        "Как получить часть строки?",
+                        "Метод substring(int beginIndex, int lastIndex) — возвращает часть строки по указанным индексам."
+                ),
+                new Question(
+                        "Как узнать значение конкретного символа строки, зная его порядковый номер в строке?",
+                        "str.charAt(int i) вернет символ по индексу"
+                )
         ));
         int pos = random.nextInt(questionsRandom.size());
         Question question = questionsRandom.get(pos);
-        questions.add(question);
+        javaQuestionRepository.add(question);
         return question;
     }
 }
