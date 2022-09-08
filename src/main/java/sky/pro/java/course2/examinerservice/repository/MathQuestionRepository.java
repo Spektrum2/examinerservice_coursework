@@ -47,13 +47,10 @@ public class MathQuestionRepository implements QuestionRepository {
 
     @Override
     public Question find(Question question) {
-        Question question1 = null;
-        for (Question question2 : questions) {
-            if (question2.equals(question)) {
-                question1 = question2;
-            }
+        if (!questions.contains(question)) {
+            return null;
         }
-        return question1;
+        return question;
     }
 
     @Override

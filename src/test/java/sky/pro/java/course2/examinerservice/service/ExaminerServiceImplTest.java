@@ -9,7 +9,6 @@ import org.mockito.junit.jupiter.MockitoExtension;
 import sky.pro.java.course2.examinerservice.domain.Question;
 import sky.pro.java.course2.examinerservice.exceptions.QuestionInvalidAmountException;
 
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -41,7 +40,6 @@ class ExaminerServiceImplTest {
         List<Question> actual  = new ArrayList<>(out.getQuestions(1));
         assertThat(actual.get(0)).isIn(expected);
         assertThat(out.getQuestions(2)).isEqualTo(expected);
-
     }
 
     @Test

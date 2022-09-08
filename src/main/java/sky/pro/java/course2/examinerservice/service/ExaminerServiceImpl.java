@@ -10,6 +10,7 @@ import java.util.*;
 public class ExaminerServiceImpl implements ExaminerService {
     private final JavaQuestionService javaQuestionService;
     private final MathQuestionService mathQuestionService;
+    private final Random random = new Random();
 
     public ExaminerServiceImpl(JavaQuestionService javaQuestionService, MathQuestionService mathQuestionService) {
         this.javaQuestionService = javaQuestionService;
@@ -19,7 +20,6 @@ public class ExaminerServiceImpl implements ExaminerService {
     @Override
     public Collection<Question> getQuestions(int amount) {
         List<Question> questions = new ArrayList<>();
-        Random random = new Random();
         int countJava;
         int countMath = 0;
         if (amount < 1 || amount > 10) {

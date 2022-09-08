@@ -14,8 +14,8 @@ import java.util.Random;
 
 @Service("mathQuestion")
 public class MathQuestionService implements QuestionService {
-
     private final MathQuestionRepository mathQuestionRepository;
+    private final Random random = new Random();
 
     public MathQuestionService(MathQuestionRepository mathQuestionRepository) {
         this.mathQuestionRepository = mathQuestionRepository;
@@ -57,7 +57,6 @@ public class MathQuestionService implements QuestionService {
 
     @Override
     public Question getRandomQuestion() {
-        Random random = new Random();
         List<Question> questionsRandom = new ArrayList<>(List.of(
                 new Question("Решить двойное неравенство 4 < 3 - 2x <= 9", "[-3; -0.5)"),
                 new Question("Найти значение выражения (m + n)² - 3n, если m = 1/6, n = 1/3", "-3/4"),

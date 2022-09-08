@@ -11,7 +11,7 @@ import sky.pro.java.course2.examinerservice.service.QuestionService;
 import java.util.Collection;
 
 @RestController
-@RequestMapping("/exam/math")
+@RequestMapping("/math")
 public class MathQuestionController {
     private final QuestionService questionService;
 

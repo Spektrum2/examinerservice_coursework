@@ -11,8 +11,8 @@ import java.util.*;
 
 @Service("javaQuestion")
 public class JavaQuestionService implements QuestionService {
-
     private final JavaQuestionRepository javaQuestionRepository;
+    private final Random random = new Random();
 
     public JavaQuestionService(JavaQuestionRepository javaQuestionRepository) {
         this.javaQuestionRepository = javaQuestionRepository;
@@ -54,7 +54,6 @@ public class JavaQuestionService implements QuestionService {
 
     @Override
     public Question getRandomQuestion() {
-        Random random = new Random();
         List<Question> questionsRandom = new ArrayList<>(List.of(
                 new Question(
                         "Как правильно организовать доступ к полям класса?",

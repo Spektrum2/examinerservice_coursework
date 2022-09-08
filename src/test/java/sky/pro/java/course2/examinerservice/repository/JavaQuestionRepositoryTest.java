@@ -6,7 +6,6 @@ import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 import sky.pro.java.course2.examinerservice.domain.Question;
 
-import javax.annotation.PostConstruct;
 import java.util.HashSet;
 import java.util.Set;
 import java.util.stream.Stream;
@@ -19,7 +18,6 @@ class JavaQuestionRepositoryTest {
 
 
     @Test
-    @PostConstruct
     void initTest() {
         Set<Question> expected = new HashSet<>(Set.of(
                 new Question(
