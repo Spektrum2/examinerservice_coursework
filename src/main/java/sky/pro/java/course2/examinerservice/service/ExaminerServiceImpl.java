@@ -8,8 +8,8 @@ import java.util.*;
 
 @Service
 public class ExaminerServiceImpl implements ExaminerService {
-   private final JavaQuestionService javaQuestionService;
-   private final MathQuestionService mathQuestionService;
+    private final JavaQuestionService javaQuestionService;
+    private final MathQuestionService mathQuestionService;
 
     public ExaminerServiceImpl(JavaQuestionService javaQuestionService, MathQuestionService mathQuestionService) {
         this.javaQuestionService = javaQuestionService;
@@ -30,7 +30,7 @@ public class ExaminerServiceImpl implements ExaminerService {
             if (countJava == 0) {
                 countMath = 1;
             }
-        }else {
+        } else {
             countJava = random.nextInt(amount - 1) + 1;
             countMath = amount - countJava;
         }
