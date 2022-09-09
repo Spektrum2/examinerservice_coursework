@@ -10,7 +10,9 @@ import sky.pro.java.course2.examinerservice.domain.Question;
 import sky.pro.java.course2.examinerservice.exceptions.QuestionInvalidAmountException;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 import static org.assertj.core.api.AssertionsForInterfaceTypes.assertThat;
 import static org.assertj.core.api.AssertionsForClassTypes.assertThatExceptionOfType;
@@ -27,7 +29,7 @@ class ExaminerServiceImplTest {
 
     @Test
     void getQuestionsTest() {
-        List<Question> expected = new ArrayList<>(List.of(
+        Set<Question> expected = new HashSet<>(List.of(
                 new Question("Hello", "World"),
                 new Question("Bay", "Friend")
         ));
