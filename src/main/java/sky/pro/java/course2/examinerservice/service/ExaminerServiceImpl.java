@@ -19,7 +19,7 @@ public class ExaminerServiceImpl implements ExaminerService {
     @Override
     public Collection<Question> getQuestions(int amount) {
         Set<Question> questions = new HashSet<>();
-        Set<Question> questions2 = new HashSet<>();
+        Set<Question> questionsMath = new HashSet<>();
         int countJava;
         int countMath;
         if (amount < 1 || amount > 10) {
@@ -34,10 +34,10 @@ public class ExaminerServiceImpl implements ExaminerService {
         while (questions.size() != countJava) {
             questions.add(questionServices.get(0).getRandomQuestion());
         }
-        while (questions2.size() != countMath) {
-            questions2.add(questionServices.get(1).getRandomQuestion());
+        while (questionsMath.size() != countMath) {
+            questionsMath.add(questionServices.get(1).getRandomQuestion());
         }
-        questions.addAll(questions2);
+        questions.addAll(questionsMath);
         return questions;
     }
 }
