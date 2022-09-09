@@ -8,19 +8,17 @@ import java.util.*;
 
 @Service
 public class ExaminerServiceImpl implements ExaminerService {
-    private final JavaQuestionService javaQuestionService;
-    private final MathQuestionService mathQuestionService;
+
+    private final List<QuestionService> questionServices;
 
     public ExaminerServiceImpl(JavaQuestionService javaQuestionService, MathQuestionService mathQuestionService) {
-        this.javaQuestionService = javaQuestionService;
-        this.mathQuestionService = mathQuestionService;
+       this.questionServices = new ArrayList<>(List.of(javaQuestionService, mathQuestionService));
     }
 
     private final Random random = new Random();
 
     @Override
     public Collection<Question> getQuestions(int amount) {
-        List<QuestionService> questionServices = new ArrayList<>(List.of(javaQuestionService, mathQuestionService));
         Set<Question> questions = new HashSet<>();
         Set<Question> questionsMath = new HashSet<>();
         int countJava;

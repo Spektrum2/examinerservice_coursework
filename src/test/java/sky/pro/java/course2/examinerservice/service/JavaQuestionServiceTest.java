@@ -80,7 +80,7 @@ class JavaQuestionServiceTest {
         out.add(question.getQuestion(), question.getAnswer());
         when(javaQuestionRepository.getAll()).thenReturn(test);
         when(javaQuestionRepository.find(any())).thenReturn(question);
-        assertThat(out.getRandomQuestion()).isIn(question);
+        assertThat(out.getRandomQuestion()).isEqualTo(question);
     }
 
     @ParameterizedTest
