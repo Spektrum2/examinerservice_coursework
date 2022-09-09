@@ -40,7 +40,7 @@ class ExaminerServiceImplTest {
         when(mathQuestionService.getRandomQuestion()).thenReturn(question2);
         List<Question> actual = new ArrayList<>(out.getQuestions(1));
         assertThat(actual.get(0)).isIn(expected);
-        assertThat(out.getQuestions(2)).isEqualTo(expected);
+        assertThat(out.getQuestions(2)).containsExactlyElementsOf(expected);
     }
 
     @Test
