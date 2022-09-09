@@ -11,7 +11,9 @@ import java.util.*;
 
 @Service("javaQuestion")
 public class JavaQuestionService implements QuestionService {
+
     private final JavaQuestionRepository javaQuestionRepository;
+
     private final Random random = new Random();
 
     public JavaQuestionService(JavaQuestionRepository javaQuestionRepository) {
@@ -54,50 +56,38 @@ public class JavaQuestionService implements QuestionService {
 
     @Override
     public Question getRandomQuestion() {
-        List<Question> questionsRandom = new ArrayList<>(List.of(
-                new Question(
-                        "Как правильно организовать доступ к полям класса?",
-                        "Модификатор доступа — private. Доступ через методы get, set."
-                ),
-                new Question(
-                        "Дайте определение понятию метод",
-                        "Метод — это последовательность команд, которые вызываются по определенному имени."
-                ),
-                new Question(
-                        "Что такое итерация цикла?",
-                        "Это одноразовое выполнение кода, размещенного в теле цикла"),
-                new Question(
-                        "Какие циклы вы знаете?",
-                        "for, while, do-while, for-each"
-                ),
-                new Question(
-                        "Какой оператор используется для немедленной остановки цикла?",
-                        "break;"
-                ),
-                new Question(
-                        "Какой оператор используется для перехода к следующей итерации цикла?",
-                        "continue;"
-                ),
-                new Question(
-                        "Какие данные могут хранить коллекции?",
-                        "Коллекции могут хранить любые ссылочные типы данных."
-                ),
-                new Question(
-                        "Что будет, если в Map положить два значения с одинаковым ключом?",
-                        "Последнее значение перезапишет предыдущее."
-                ),
-                new Question(
-                        "Как получить часть строки?",
-                        "Метод substring(int beginIndex, int lastIndex) — возвращает часть строки по указанным индексам."
-                ),
-                new Question(
-                        "Как узнать значение конкретного символа строки, зная его порядковый номер в строке?",
-                        "str.charAt(int i) вернет символ по индексу"
-                )
-        ));
-        int pos = random.nextInt(questionsRandom.size());
-        Question question = questionsRandom.get(pos);
-        javaQuestionRepository.add(question);
-        return question;
+        List<Question> questions = new ArrayList<>(List.of(
+            new Question(
+                    "Дайте определение понятию исключение",
+                    "Исключение — это проблема(ошибка) возникающая во время выполнения программы."),
+            new Question(
+                    "Какова роль и правила написания оператора выбора (switch)?",
+                    "Оператор switch сравнивает аргумент на равенство с предложенным значением. Обязательно необходимо ставить break; после завершения тело команды, иначе будет продолжаться выполнение ниже по строчкам."),
+            new Question(
+                    "Что вы знаете о функции main, какие обязательные условия ее определения?",
+                    "Метод main() — точка входа в программу. Может быть несколько методов main. Входные параметры — только массив строк. Если этого метода не будет, то компиляция возможна, но при запуске будет Error: Main method not found."),
+            new Question(
+                    "Могут ли нестатические методы перегрузить статические?",
+                    "Да. Это будут просто два разных метода для программы. Статический будет доступен по имени класса."),
+            new Question(
+                    "Как получить доступ к переопределенным методам родительского класса?",
+                    "super.method();"),
+            new Question(
+                    "Что значит слово инициализация?",
+                    "Инициализация — создание, активация, подготовка к работе, определение параметров."),
+            new Question(
+                    "Какими значениями инициализируются переменные по умолчанию?",
+                    "Числа инициализируются 0 или 0.0. Объекты (в том числе String) — null, char — u0000; boolean — false;"),
+            new Question(
+                    "Что такое таблица истинности?",
+                    "Таблица истинности — это таблица, описывающая логическую функцию."),
+            new Question(
+                    "О чем говорят ключевые слова “this”, “super”, где и как их можно использовать?",
+                    "super — используется для обращения к базовому классу, а this к текущему."),
+            new Question(
+                    "Может ли метод принимать разное количество параметров (аргументы переменной длины)?",
+                    "Да. Запись имеет вид method(type … val). Например public void method(String … strings), где strings это массив, т.е. можно записать")
+    ));
+        return javaQuestionRepository.find(questions.get(random.nextInt(questions.size())));
     }
 }

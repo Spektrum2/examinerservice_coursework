@@ -34,7 +34,22 @@ class JavaQuestionRepositoryTest {
                         "Да. Это будут просто два разных метода для программы. Статический будет доступен по имени класса."),
                 new Question(
                         "Как получить доступ к переопределенным методам родительского класса?",
-                        "super.method();")
+                        "super.method();"),
+                new Question(
+                        "Что значит слово инициализация?",
+                        "Инициализация — создание, активация, подготовка к работе, определение параметров."),
+                new Question(
+                        "Какими значениями инициализируются переменные по умолчанию?",
+                        "Числа инициализируются 0 или 0.0. Объекты (в том числе String) — null, char — u0000; boolean — false;"),
+                new Question(
+                        "Что такое таблица истинности?",
+                        "Таблица истинности — это таблица, описывающая логическую функцию."),
+                new Question(
+                        "О чем говорят ключевые слова “this”, “super”, где и как их можно использовать?",
+                        "super — используется для обращения к базовому классу, а this к текущему."),
+                new Question(
+                        "Может ли метод принимать разное количество параметров (аргументы переменной длины)?",
+                        "Да. Запись имеет вид method(type … val). Например public void method(String … strings), где strings это массив, т.е. можно записать")
         ));
         javaQuestionRepository.init();
         assertThat(javaQuestionRepository.getAll()).isEqualTo(expected);
@@ -50,7 +65,10 @@ class JavaQuestionRepositoryTest {
     @MethodSource("provideParamsForTests")
     void find(Question question) {
         javaQuestionRepository.add(question);
+        Question question1 = new Question("Hello", "World");
         assertThat(javaQuestionRepository.find(question)).isEqualTo(question);
+        assertThat(javaQuestionRepository.find(question1)).isEqualTo(null);
+
     }
 
     @ParameterizedTest

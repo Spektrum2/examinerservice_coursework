@@ -7,10 +7,7 @@ import sky.pro.java.course2.examinerservice.exceptions.QuestionAnswerSameExcepti
 import sky.pro.java.course2.examinerservice.exceptions.QuestionNotFoundException;
 import sky.pro.java.course2.examinerservice.repository.MathQuestionRepository;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.List;
-import java.util.Random;
+import java.util.*;
 
 @Service("mathQuestion")
 public class MathQuestionService implements QuestionService {
@@ -57,21 +54,38 @@ public class MathQuestionService implements QuestionService {
 
     @Override
     public Question getRandomQuestion() {
-        List<Question> questionsRandom = new ArrayList<>(List.of(
-                new Question("Решить двойное неравенство 4 < 3 - 2x <= 9", "[-3; -0.5)"),
-                new Question("Найти значение выражения (m + n)² - 3n, если m = 1/6, n = 1/3", "-3/4"),
-                new Question("Решить уравнение 2(x - 3) + 3x = 4", "x = 2"),
-                new Question("Упростить выражение 7a + 23 + 2(-4a + 1)", "-a + 25"),
-                new Question("Вычислить 4 * (-5)³ + 8 * 0.5", "–496"),
-                new Question("Выполнить умножение 2a²b(-5b² + 2ab)", "-10a²b³ + 4a³b²"),
-                new Question("Упростить выражение 5x(x² + 4x - 2) - 2x²(3x - 1)", "-x³ + 22x² - 10x"),
-                new Question("Решить уравнение 2x(2x + 3) - 7 = 4x² - 4", "x = 0.5"),
-                new Question("Выполнить умножение (2a + b - 3c) * (-4a)", "-8a² - 4ab + 12ac"),
-                new Question("Разложить на множители многочлен -2a²b - 8a²b² + 10ab²", "-2ab(a + 4ab - 5b)")
+        List<Question> questions = new ArrayList<>(List.of(
+                new Question(
+                        "Найти значение выражения a²(b+c), если a = 4, b = -7, c = 2",
+                        "–80"),
+                new Question(
+                        "Найти нули функции y = x² - 8x + 12",
+                        "x = 2; x = 6"),
+                new Question(
+                        "Решить уравнение |5x - 3(x + 2) + 3| = 3",
+                        "x = 3; x = 0"),
+                new Question(
+                        "Решить уравнение 5(2x - 1) = 4x - 23",
+                        "-3"),
+                new Question(
+                        "Решить уравнение 3x - 2(x - 1) = x + 2",
+                        "Корнем уравнения является любое число."),
+                new Question(
+                        "Найти общее решение линейного дифференциального уравнения первого порядка",
+                        "xy′+x²+xy−y=0"),
+                new Question(
+                        "Написать разложение вектора x по векторам (a,b,c)",
+                        "x=(−4;4;4), a=(3;1;0), b=(−1;0;6), c=(−1;2;0)"),
+                new Question(
+                        "Решить уравнение log₂x = -3",
+                        "1/8"),
+                new Question(
+                        "Решить уравнение log₂(x² + 2x - 7) = log₂(x - 1)",
+                        "2"),
+                new Question(
+                        "Решить уравнение log₅(x - 3) + log₅(x + 1) = 1",
+                        "4")
         ));
-        int pos = random.nextInt(questionsRandom.size());
-        Question question = questionsRandom.get(pos);
-        mathQuestionRepository.add(question);
-        return question;
+        return mathQuestionRepository.find(questions.get(random.nextInt(questions.size())));
     }
 }

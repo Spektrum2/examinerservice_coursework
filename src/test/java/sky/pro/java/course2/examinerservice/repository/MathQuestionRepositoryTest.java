@@ -1,6 +1,5 @@
 package sky.pro.java.course2.examinerservice.repository;
 
-import org.assertj.core.api.AssertionsForClassTypes;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
@@ -34,7 +33,22 @@ class MathQuestionRepositoryTest {
                         "-3"),
                 new Question(
                         "Решить уравнение 3x - 2(x - 1) = x + 2",
-                        "Корнем уравнения является любое число.")
+                        "Корнем уравнения является любое число."),
+                new Question(
+                        "Найти общее решение линейного дифференциального уравнения первого порядка",
+                        "xy′+x²+xy−y=0"),
+                new Question(
+                        "Написать разложение вектора x по векторам (a,b,c)",
+                        "x=(−4;4;4), a=(3;1;0), b=(−1;0;6), c=(−1;2;0)"),
+                new Question(
+                        "Решить уравнение log₂x = -3",
+                        "1/8"),
+                new Question(
+                        "Решить уравнение log₂(x² + 2x - 7) = log₂(x - 1)",
+                        "2"),
+                new Question(
+                        "Решить уравнение log₅(x - 3) + log₅(x + 1) = 1",
+                        "4")
         ));
         mathQuestionRepository.init();
         assertThat(mathQuestionRepository.getAll()).isEqualTo(expected);
@@ -43,21 +57,23 @@ class MathQuestionRepositoryTest {
     @ParameterizedTest
     @MethodSource("provideParamsForTests")
     void add(Question question) {
-        AssertionsForClassTypes.assertThat(mathQuestionRepository.add(question)).isEqualTo(question);
+        assertThat(mathQuestionRepository.add(question)).isEqualTo(question);
     }
 
     @ParameterizedTest
     @MethodSource("provideParamsForTests")
     void find(Question question) {
         mathQuestionRepository.add(question);
-        AssertionsForClassTypes.assertThat(mathQuestionRepository.find(question)).isEqualTo(question);
+        Question question1 = new Question("Hello", "World");
+        assertThat(mathQuestionRepository.find(question)).isEqualTo(question);
+        assertThat(mathQuestionRepository.find(question1)).isEqualTo(null);
     }
 
     @ParameterizedTest
     @MethodSource("provideParamsForTests")
     void remove(Question question) {
         mathQuestionRepository.add(question);
-        AssertionsForClassTypes.assertThat(mathQuestionRepository.remove(question)).isEqualTo(question);
+        assertThat(mathQuestionRepository.remove(question)).isEqualTo(question);
         assertThat(mathQuestionRepository.getAll()).isEmpty();
     }
 

@@ -36,6 +36,21 @@ public class MathQuestionRepository implements QuestionRepository {
         questions.add(new Question(
                 "Решить уравнение 3x - 2(x - 1) = x + 2",
                 "Корнем уравнения является любое число."));
+        questions.add(new Question(
+                "Найти общее решение линейного дифференциального уравнения первого порядка",
+                "xy′+x²+xy−y=0"));
+        questions.add(new Question(
+                "Написать разложение вектора x по векторам (a,b,c)",
+                "x=(−4;4;4), a=(3;1;0), b=(−1;0;6), c=(−1;2;0)"));
+        questions.add(new Question(
+                "Решить уравнение log₂x = -3",
+                "1/8"));
+        questions.add(new Question(
+                "Решить уравнение log₂(x² + 2x - 7) = log₂(x - 1)",
+                "2"));
+        questions.add(new Question(
+                "Решить уравнение log₅(x - 3) + log₅(x + 1) = 1",
+                "4"));
 
     }
 

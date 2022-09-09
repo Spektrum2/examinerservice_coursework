@@ -8,48 +8,36 @@ import java.util.*;
 
 @Service
 public class ExaminerServiceImpl implements ExaminerService {
-    private final JavaQuestionService javaQuestionService;
-    private final MathQuestionService mathQuestionService;
-    private final Random random = new Random();
+    private final List<QuestionService> questionServices;
 
-    public ExaminerServiceImpl(JavaQuestionService javaQuestionService, MathQuestionService mathQuestionService) {
-        this.javaQuestionService = javaQuestionService;
-        this.mathQuestionService = mathQuestionService;
+    public ExaminerServiceImpl(List<QuestionService> questionServices) {
+        this.questionServices = questionServices;
     }
+
+    private final Random random = new Random();
 
     @Override
     public Collection<Question> getQuestions(int amount) {
-        List<Question> questions = new ArrayList<>();
+        Set<Question> questions = new HashSet<>();
+        Set<Question> questions2 = new HashSet<>();
         int countJava;
-        int countMath = 0;
+        int countMath;
         if (amount < 1 || amount > 10) {
             throw new QuestionInvalidAmountException();
         }
         if (amount == 1) {
-            countJava = random.nextInt(2);
-            if (countJava == 0) {
-                countMath = 1;
-            }
-        } else {
-            countJava = random.nextInt(amount - 1) + 1;
-            countMath = amount - countJava;
+            questions.add(questionServices.get(random.nextInt(2)).getRandomQuestion());
+            return questions;
         }
-        int counter = 0;
-        while (counter != countJava) {
-            Question question = javaQuestionService.getRandomQuestion();
-            if (!questions.contains(question)) {
-                questions.add(question);
-                counter++;
-            }
+        countJava = random.nextInt(amount - 1) + 1;
+        countMath = amount - countJava;
+        while (questions.size() != countJava) {
+            questions.add(questionServices.get(0).getRandomQuestion());
         }
-        counter = 0;
-        while (counter != countMath) {
-            Question question = mathQuestionService.getRandomQuestion();
-            if (!questions.contains(question)) {
-                questions.add(question);
-                counter++;
-            }
+        while (questions2.size() != countMath) {
+            questions2.add(questionServices.get(1).getRandomQuestion());
         }
+        questions.addAll(questions2);
         return questions;
     }
 }

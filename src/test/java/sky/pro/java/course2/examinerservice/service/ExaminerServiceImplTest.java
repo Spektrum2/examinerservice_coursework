@@ -34,10 +34,9 @@ class ExaminerServiceImplTest {
         Question question = new Question("Hello", "World");
         Question question2 = new Question("Bay", "Friend");
 
-
         when(javaQuestionService.getRandomQuestion()).thenReturn(question);
         when(mathQuestionService.getRandomQuestion()).thenReturn(question2);
-        List<Question> actual  = new ArrayList<>(out.getQuestions(1));
+        List<Question> actual = new ArrayList<>(out.getQuestions(1));
         assertThat(actual.get(0)).isIn(expected);
         assertThat(out.getQuestions(2)).isEqualTo(expected);
     }
