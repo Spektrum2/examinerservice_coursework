@@ -75,8 +75,10 @@ class JavaQuestionServiceTest {
     @ParameterizedTest
     @MethodSource("provideParamsForTests")
     void getRandomQuestionTest(Question question) {
+        test.add(question);
         when(javaQuestionRepository.add(any())).thenReturn(question);
         out.add(question.getQuestion(), question.getAnswer());
+        when(javaQuestionRepository.getAll()).thenReturn(test);
         when(javaQuestionRepository.find(any())).thenReturn(question);
         assertThat(out.getRandomQuestion()).isIn(question);
     }
