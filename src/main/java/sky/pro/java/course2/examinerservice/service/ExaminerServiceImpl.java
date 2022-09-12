@@ -12,7 +12,7 @@ public class ExaminerServiceImpl implements ExaminerService {
     private final List<QuestionService> questionServices;
 
     public ExaminerServiceImpl(JavaQuestionService javaQuestionService, MathQuestionService mathQuestionService) {
-       this.questionServices = new ArrayList<>(List.of(javaQuestionService, mathQuestionService));
+        this.questionServices = new ArrayList<>(List.of(javaQuestionService, mathQuestionService));
     }
 
     private final Random random = new Random();
