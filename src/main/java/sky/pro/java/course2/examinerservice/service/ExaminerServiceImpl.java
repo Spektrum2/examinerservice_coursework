@@ -23,7 +23,7 @@ public class ExaminerServiceImpl implements ExaminerService {
         Set<Question> questionsMath = new HashSet<>();
         int countJava;
         int countMath;
-        if (amount < 1 || amount > questionServices.get(0).getAll().size()) {
+        if (amount < 1 || amount > 10) {
             throw new QuestionInvalidAmountException();
         }
         if (amount == 1) {
