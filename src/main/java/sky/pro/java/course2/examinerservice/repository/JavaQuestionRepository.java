@@ -5,6 +5,7 @@ import sky.pro.java.course2.examinerservice.domain.Question;
 
 import javax.annotation.PostConstruct;
 import java.util.Collection;
+import java.util.Collections;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -73,6 +74,6 @@ public class JavaQuestionRepository implements QuestionRepository {
 
     @Override
     public Collection<Question> getAll() {
-        return questions;
+        return Collections.unmodifiableCollection(questions);
     }
 }

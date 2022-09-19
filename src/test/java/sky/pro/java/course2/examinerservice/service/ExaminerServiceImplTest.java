@@ -29,7 +29,7 @@ class ExaminerServiceImplTest {
 
     @Test
     void getQuestionsTest() {
-        Set<Question> expected = new HashSet<>(List.of(
+        Set<Question> expected = new HashSet<>(Set.of(
                 new Question("Hello", "World"),
                 new Question("Bay", "Friend")
         ));
@@ -40,7 +40,7 @@ class ExaminerServiceImplTest {
         when(mathQuestionService.getRandomQuestion()).thenReturn(question2);
         List<Question> actual = new ArrayList<>(out.getQuestions(1));
         assertThat(actual.get(0)).isIn(expected);
-        assertThat(out.getQuestions(2)).containsExactlyElementsOf(expected);
+        assertThat(out.getQuestions(2)).containsExactlyInAnyOrderElementsOf(expected);
     }
 
     @Test

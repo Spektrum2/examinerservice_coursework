@@ -6,8 +6,7 @@ import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 import sky.pro.java.course2.examinerservice.domain.Question;
 
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
 import java.util.stream.Stream;
 
 import static org.assertj.core.api.AssertionsForInterfaceTypes.assertThat;
@@ -19,7 +18,7 @@ class JavaQuestionRepositoryTest {
 
     @Test
     void initTest() {
-        Set<Question> expected = new HashSet<>(Set.of(
+        List<Question> expected = new ArrayList<>(List.of(
                 new Question(
                 "Дайте определение понятию исключение",
                 "Исключение — это проблема(ошибка) возникающая во время выполнения программы."),
@@ -52,7 +51,7 @@ class JavaQuestionRepositoryTest {
                         "Да. Запись имеет вид method(type … val). Например public void method(String … strings), где strings это массив, т.е. можно записать")
         ));
         javaQuestionRepository.init();
-        assertThat(javaQuestionRepository.getAll()).isEqualTo(expected);
+        assertThat(javaQuestionRepository.getAll()).containsExactlyInAnyOrderElementsOf(expected);
     }
 
     @ParameterizedTest
