@@ -13,7 +13,7 @@ import static org.assertj.core.api.AssertionsForInterfaceTypes.assertThat;
 
 
 class JavaQuestionRepositoryTest {
-    private final JavaQuestionRepository javaQuestionRepository = new JavaQuestionRepository();
+    private final QuestionRepository out = new JavaQuestionRepository();
 
 
     @Test
@@ -50,32 +50,32 @@ class JavaQuestionRepositoryTest {
                         "Может ли метод принимать разное количество параметров (аргументы переменной длины)?",
                         "Да. Запись имеет вид method(type … val). Например public void method(String … strings), где strings это массив, т.е. можно записать")
         ));
-        javaQuestionRepository.init();
-        assertThat(javaQuestionRepository.getAll()).containsExactlyInAnyOrderElementsOf(expected);
+        out.init();
+        assertThat(out.getAll()).containsExactlyInAnyOrderElementsOf(expected);
     }
 
     @ParameterizedTest
     @MethodSource("provideParamsForTests")
     void add(Question question) {
-        assertThat(javaQuestionRepository.add(question)).isEqualTo(question);
+        assertThat(out.add(question)).isEqualTo(question);
     }
 
     @ParameterizedTest
     @MethodSource("provideParamsForTests")
     void find(Question question) {
-        javaQuestionRepository.add(question);
+        out.add(question);
         Question question1 = new Question("Hello", "World");
-        assertThat(javaQuestionRepository.find(question)).isEqualTo(question);
-        assertThat(javaQuestionRepository.find(question1)).isEqualTo(null);
+        assertThat(out.find(question)).isEqualTo(question);
+        assertThat(out.find(question1)).isEqualTo(null);
 
     }
 
     @ParameterizedTest
     @MethodSource("provideParamsForTests")
     void remove(Question question) {
-        javaQuestionRepository.add(question);
-        assertThat(javaQuestionRepository.remove(question)).isEqualTo(question);
-        assertThat(javaQuestionRepository.getAll()).isEmpty();
+        out.add(question);
+        assertThat(out.remove(question)).isEqualTo(question);
+        assertThat(out.getAll()).isEmpty();
     }
 
     public static Stream<Arguments> provideParamsForTests () {
