@@ -15,7 +15,7 @@
 1. Реализовать сущность Question с двумя полями: question и answer. Данная сущность будет использоваться в качестве хранителя данных по вопросу.
     - Архитектура
         
-        ![Untitled](https://disk.yandex.ru/i/xCqVDOlrIWgliQ)
+        ![Untitled](https://i.postimg.cc/j5z6hK2F/Untitled.png)
         
 2. Сделать интерфейс QuestionService, который будет содержать в себе все методы по работе с вопросами определенного предмета.
     - Архитектура
