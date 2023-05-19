@@ -52,7 +52,7 @@
     
     - Архитектура
         
-        ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/09fcb326-fcd6-4f22-887b-88266928110d/Untitled.png)
+        ![Untitled](https://downloader.disk.yandex.ru/preview/ea297e85ec9f26006f2369129a13e1f6457639b3ffaeabbbdf712d6439bcc1e7/6467cc48/gyTS8saa2q3MmDZi_wi_UVb7_7_2Fo8fH8bSeN238s5AwBwnrs810jvo3bKpfD7cZtFO5MOFoJKzLWbRPU_QXA%3D%3D?uid=0&filename=Untitled%20%283%29.png&disposition=inline&hash=&limit=0&content_type=image%2Fpng&owner_uid=0&tknv=v2&size=3840x1896)
         
 6. Реализовать ExaminerServiceImpl, который является реализацией интерфейса из прошлого шага. Данный сервис должен внутри себя хранить поля типа QuestionService.
     
