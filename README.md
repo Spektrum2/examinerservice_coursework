@@ -20,7 +20,7 @@
 2. Сделать интерфейс QuestionService, который будет содержать в себе все методы по работе с вопросами определенного предмета.
     - Архитектура
         
-        ![diagram-17353247503607978677.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/a4c0fece-02d6-41f3-bf07-24da115beee9/diagram-17353247503607978677.png)
+        ![diagram-17353247503607978677.png](https://downloader.disk.yandex.ru/preview/e6c73a7ba4fc131aae0437000bb73c878860a3af827bf0c3bc800c8bbf02140c/6467cae3/1oi8r3TEWm9OtEPcYeKZN1b7_7_2Fo8fH8bSeN238s53Ofy7q0k_7cBovdY__Mml9nca730aUMgxzo7fZ78T7A%3D%3D?uid=0&filename=diagram-17353247503607978677.png&disposition=inline&hash=&limit=0&content_type=image%2Fpng&owner_uid=0&tknv=v2&size=3840x1896)
         
 3. Реализовать сервис JavaQuestionService, который будет реализовывать QuestionService и хранить в себе список вопросов по Java, а также осуществлять всю работу с этим списком.
     
