@@ -44,7 +44,7 @@
     
     - Архитектура
         
-        ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/20e1b4ad-1631-4a4c-8b99-35bcf5c0d247/Untitled.png)
+        ![Untitled]([https://s3-us-west-2.amazonaws.com/secure.notion-static.com/20e1b4ad-1631-4a4c-8b99-35bcf5c0d247/Untitled.png](https://disk.yandex.ru/i/xCqVDOlrIWgliQ))
         
 5. Сделать интерфейс ExaminerService с одним методом getQuestions.
     
