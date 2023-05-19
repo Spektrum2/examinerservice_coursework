@@ -17,6 +17,12 @@ public class ExaminerServiceImpl implements ExaminerService {
 
     private final Random random = new Random();
 
+    /**
+     * Метод возвращает случайные вопросы по Java и по Математике
+     *
+     * @param amount количество вопросов
+     * @return возврощает список вопросов
+     */
     @Override
     public Collection<Question> getQuestions(int amount) {
         Set<Question> questions = new HashSet<>();
