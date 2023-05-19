@@ -97,7 +97,7 @@
     
     - Архитектура
         
-        ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/702b4ce0-980a-48be-b68f-88f8180e0f74/Untitled.png)
+        ![Untitled](https://downloader.disk.yandex.ru/preview/ab9c5a5cce7157a0ba0082a44c0b8bacd6d20e504898476696ecfc18b77273f6/6467cdc8/fT7pvTYaudWOrszZCvWXO1b7_7_2Fo8fH8bSeN238s4RsxSZyok3aYsWhnUid8hN-bDSbm4Ch8fDchDlkBOVjg%3D%3D?uid=0&filename=Untitled%20%285%29.png&disposition=inline&hash=&limit=0&content_type=image%2Fpng&owner_uid=0&tknv=v2&size=3840x1896)
         
 4. Доработать ExaminerService на получение случайного набора вопросов не только из JavaQuestionService, но и из MathQuestionService. Включать в запрос вопросы не только по джаве, но и по математике. Количество вопросов по каждой из тем выбирать случайно. Для получения конкретной реализации интерфейса QuestionService может потребоваться аннотация @Qualifier.
 5. Доработать JavaQuestionController, так как вторая реализация QuestionService сломала корректный инжект по интерфейсу. Может потребоваться аннотация @Qualifier.
