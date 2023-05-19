@@ -64,7 +64,7 @@
     2. Если запрошено большее количество вопросов, чем хранится в сервисе, нужно выкинуть исключение. Для этого, соответственно, нужно написать свое исключение со статусом BAD_REQUEST.
     - Архитектура
         
-        ![Untitled]([https://s3-us-west-2.amazonaws.com/secure.notion-static.com/4cb9d332-c716-4734-9642-22eb2969ea17/Untitled.png](https://downloader.disk.yandex.ru/preview/d97a1578903c96cd9d18961af676dca58b05c584d0c735f0169aa5e0b7f18880/6467ccd1/HXXK3JGF4-pHH7QlKGowRVb7_7_2Fo8fH8bSeN238s7KaNkg4ddxBZVdCiQ1qLhjqNCbKlONzMg5hKqbA7RA0w%3D%3D?uid=0&filename=Untitled%20%284%29.png&disposition=inline&hash=&limit=0&content_type=image%2Fpng&owner_uid=0&tknv=v2&size=3840x1896))
+        ![Untitled](https://downloader.disk.yandex.ru/preview/915267eb6c1eb5944119f561fe9ac5f54e6b1c155827a46fbabe96d2f5c76c1d/6467cd69/HXXK3JGF4-pHH7QlKGowRVb7_7_2Fo8fH8bSeN238s7KaNkg4ddxBZVdCiQ1qLhjqNCbKlONzMg5hKqbA7RA0w%3D%3D?uid=0&filename=Untitled%20%286%29.png&disposition=inline&hash=&limit=0&content_type=image%2Fpng&owner_uid=0&tknv=v2&size=3840x1896)
         
 7. Реализовать контроллер ExamController с одним методом getQuestions(int amount).
     
