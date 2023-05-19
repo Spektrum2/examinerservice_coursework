@@ -44,7 +44,7 @@
     
     - Архитектура
         
-        ![Untitled]([https://s3-us-west-2.amazonaws.com/secure.notion-static.com/20e1b4ad-1631-4a4c-8b99-35bcf5c0d247/Untitled.png](https://disk.yandex.ru/i/xCqVDOlrIWgliQ))
+        ![Untitled](https://downloader.disk.yandex.ru/preview/6f27e408cb1fc7eeb1469234aa902919a2684ad9ca887b4084064f78fd5acdca/6467cc17/QtYJLc54tgABG7PtEo5UZ1b7_7_2Fo8fH8bSeN238s46Ban9DUfI3UKeKiG2h2CB2icif1-Sif4fNytScBJ1ww%3D%3D?uid=0&filename=Untitled%20%282%29.png&disposition=inline&hash=&limit=0&content_type=image%2Fpng&owner_uid=0&tknv=v2&size=3840x1896)
         
 5. Сделать интерфейс ExaminerService с одним методом getQuestions.
     
