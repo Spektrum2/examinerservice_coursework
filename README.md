@@ -28,7 +28,7 @@
     
     - Архитектура
         
-        ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/b0d0166a-6f2d-41f2-9b00-ad0cb675ea11/Untitled.png)
+        ![Untitled](https://disk.yandex.ru/client/disk/%D0%90%D1%80%D1%85%D0%B8%D1%82%D0%B5%D0%BA%D1%82%D1%83%D1%80%D0%B0?idApp=client&dialog=slider&idDialog=%2Fdisk%2F%D0%90%D1%80%D1%85%D0%B8%D1%82%D0%B5%D0%BA%D1%82%D1%83%D1%80%D0%B0%2FUntitled%20(1).png)
         
 4. Реализовать контроллер JavaQuestionController, который будет предоставлять возможность пользователю добавлять, просматривать и удалять вопросы по Java в соответствующем QuestionService.
     
