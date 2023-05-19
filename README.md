@@ -28,7 +28,7 @@
     
     - Архитектура
         
-        ![Untitled](https://4.downloader.disk.yandex.ru/preview/a23f0d838ef99aa17ae60157e9fba618c16c7db5c851d918f360427d2180861e/inf/tHqlcpf8PYiMhx85xOHKGlb7_7_2Fo8fH8bSeN238s7fqvmj2ne_zv8O9xp3o79385ceql9uq76cd4lJM-T-IA%3D%3D?uid=721897240&filename=Untitled%20%281%29.png&disposition=inline&hash=&limit=0&content_type=image%2Fpng&owner_uid=721897240&tknv=v2&size=3814x1896)
+        ![Untitled1](https://4.downloader.disk.yandex.ru/preview/a23f0d838ef99aa17ae60157e9fba618c16c7db5c851d918f360427d2180861e/inf/tHqlcpf8PYiMhx85xOHKGlb7_7_2Fo8fH8bSeN238s7fqvmj2ne_zv8O9xp3o79385ceql9uq76cd4lJM-T-IA%3D%3D?uid=721897240&filename=Untitled%20%281%29.png&disposition=inline&hash=&limit=0&content_type=image%2Fpng&owner_uid=721897240&tknv=v2&size=3814x1896)
         
 4. Реализовать контроллер JavaQuestionController, который будет предоставлять возможность пользователю добавлять, просматривать и удалять вопросы по Java в соответствующем QuestionService.
     
