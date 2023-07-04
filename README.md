@@ -64,7 +64,7 @@
     2. Если запрошено большее количество вопросов, чем хранится в сервисе, нужно выкинуть исключение. Для этого, соответственно, нужно написать свое исключение со статусом BAD_REQUEST.
     - Архитектура
         
-        ![Untitled](https://downloader.disk.yandex.ru/preview/915267eb6c1eb5944119f561fe9ac5f54e6b1c155827a46fbabe96d2f5c76c1d/6467cd69/HXXK3JGF4-pHH7QlKGowRVb7_7_2Fo8fH8bSeN238s7KaNkg4ddxBZVdCiQ1qLhjqNCbKlONzMg5hKqbA7RA0w%3D%3D?uid=0&filename=Untitled%20%286%29.png&disposition=inline&hash=&limit=0&content_type=image%2Fpng&owner_uid=0&tknv=v2&size=3840x1896)
+        ![Untitled](https://downloader.disk.yandex.ru/preview/9b4564b62a877f752e3c17e6707012d600bda6e31f96756096bf65eb080333ed/64a4266a/HXXK3JGF4-pHH7QlKGowRVb7_7_2Fo8fH8bSeN238s7KaNkg4ddxBZVdCiQ1qLhjqNCbKlONzMg5hKqbA7RA0w%3D%3D?uid=0&filename=Untitled%20%286%29.png&disposition=inline&hash=&limit=0&content_type=image%2Fpng&owner_uid=0&tknv=v2&size=2048x2048)
         
 7. Реализовать контроллер ExamController с одним методом getQuestions(int amount).
     
@@ -97,7 +97,7 @@
     
     - Архитектура
         
-        ![Untitled](https://downloader.disk.yandex.ru/preview/ab9c5a5cce7157a0ba0082a44c0b8bacd6d20e504898476696ecfc18b77273f6/6467cdc8/fT7pvTYaudWOrszZCvWXO1b7_7_2Fo8fH8bSeN238s4RsxSZyok3aYsWhnUid8hN-bDSbm4Ch8fDchDlkBOVjg%3D%3D?uid=0&filename=Untitled%20%285%29.png&disposition=inline&hash=&limit=0&content_type=image%2Fpng&owner_uid=0&tknv=v2&size=3840x1896)
+        ![Untitled](https://downloader.disk.yandex.ru/preview/9d6e4fff99b17e4a1e9e600397fae54b6498fe86ef200627272d18694c0fd0df/64a4269c/fT7pvTYaudWOrszZCvWXO1b7_7_2Fo8fH8bSeN238s4RsxSZyok3aYsWhnUid8hN-bDSbm4Ch8fDchDlkBOVjg%3D%3D?uid=0&filename=Untitled%20%285%29.png&disposition=inline&hash=&limit=0&content_type=image%2Fpng&owner_uid=0&tknv=v2&size=2048x2048)
         
 4. Доработать ExaminerService на получение случайного набора вопросов не только из JavaQuestionService, но и из MathQuestionService. Включать в запрос вопросы не только по джаве, но и по математике. Количество вопросов по каждой из тем выбирать случайно. Для получения конкретной реализации интерфейса QuestionService может потребоваться аннотация @Qualifier.
 5. Доработать JavaQuestionController, так как вторая реализация QuestionService сломала корректный инжект по интерфейсу. Может потребоваться аннотация @Qualifier.
