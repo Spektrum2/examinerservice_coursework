@@ -14,15 +14,15 @@
 
 1. Реализовать сущность Question с двумя полями: question и answer. Данная сущность будет использоваться в качестве хранителя данных по вопросу.
     - Архитектура
+   
+        ![Untitled](https://3.downloader.disk.yandex.ru/preview/a10de352666bc73da8477b6ffedb8e929878a3032f06f66bde1efeb1b78c89b4/inf/IDaLvcL_rPBrTMPqZ6c9VVPxudwH2uIMRCwd0E60IeyoLW1neVK_gquTtQf-ImdcWWw980Z0toipdL5_g65vug%3D%3D?uid=721897240&filename=Untitled.png&disposition=inline&hash=&limit=0&content_type=image%2Fpng&owner_uid=721897240&tknv=v2&size=3817x1981)
         
-        ![Untitled](https://3.downloader.disk.yandex.ru/preview/a10de352666bc73da8477b6ffedb8e929878a3032f06f66bde1efeb1b78c89b4/inf/IDaLvcL_rPBrTMPqZ6c9VVPxudwH2uIMRCwd0E60IeyoLW1neVK_gquTtQf-ImdcWWw980Z0toipdL5_g65vug%3D%3D?uid=721897240&filename=Untitled.png&disposition=inline&hash=&limit=0&content_type=image%2Fpng&owner_uid=721897240&tknv=v2&size=3817x1981](https://3.downloader.disk.yandex.ru/preview/a10de352666bc73da8477b6ffedb8e929878a3032f06f66bde1efeb1b78c89b4/inf/IDaLvcL_rPBrTMPqZ6c9VVPxudwH2uIMRCwd0E60IeyoLW1neVK_gquTtQf-ImdcWWw980Z0toipdL5_g65vug%3D%3D?uid=721897240&filename=Untitled.png&disposition=inline&hash=&limit=0&content_type=image%2Fpng&owner_uid=721897240&tknv=v2&size=3817x1981))
-        
-2. Сделать интерфейс QuestionService, который будет содержать в себе все методы по работе с вопросами определенного предмета.
+3. Сделать интерфейс QuestionService, который будет содержать в себе все методы по работе с вопросами определенного предмета.
     - Архитектура
         
         ![diagram-17353247503607978677.png](https://downloader.disk.yandex.ru/preview/e6c73a7ba4fc131aae0437000bb73c878860a3af827bf0c3bc800c8bbf02140c/6467cae3/1oi8r3TEWm9OtEPcYeKZN1b7_7_2Fo8fH8bSeN238s53Ofy7q0k_7cBovdY__Mml9nca730aUMgxzo7fZ78T7A%3D%3D?uid=0&filename=diagram-17353247503607978677.png&disposition=inline&hash=&limit=0&content_type=image%2Fpng&owner_uid=0&tknv=v2&size=3840x1896)
         
-3. Реализовать сервис JavaQuestionService, который будет реализовывать QuestionService и хранить в себе список вопросов по Java, а также осуществлять всю работу с этим списком.
+4. Реализовать сервис JavaQuestionService, который будет реализовывать QuestionService и хранить в себе список вопросов по Java, а также осуществлять всю работу с этим списком.
     
     Реализация метода getRandomQuestion осуществляется с помощью класса Random и его метода nextInt, который в качестве параметра принимает максимальное число, а затем возвращает вам результат в виде случайного числа от 0 до максимального числа из параметров (не включительно).
     
@@ -30,7 +30,7 @@
         
         ![Untitled](https://downloader.disk.yandex.ru/preview/2011afd6b5510aafa0d1fc9e04116d5a457c46a016893e8f41db969a0272f164/6467cbcc/tHqlcpf8PYiMhx85xOHKGlb7_7_2Fo8fH8bSeN238s7fqvmj2ne_zv8O9xp3o79385ceql9uq76cd4lJM-T-IA%3D%3D?uid=0&filename=Untitled%20%281%29.png&disposition=inline&hash=&limit=0&content_type=image%2Fpng&owner_uid=0&tknv=v2&size=3840x1896)
         
-4. Реализовать контроллер JavaQuestionController, который будет предоставлять возможность пользователю добавлять, просматривать и удалять вопросы по Java в соответствующем QuestionService.
+5. Реализовать контроллер JavaQuestionController, который будет предоставлять возможность пользователю добавлять, просматривать и удалять вопросы по Java в соответствующем QuestionService.
     
     Контроллер должен иметь три метода: добавить, удалить и получить все вопросы.
     
@@ -46,7 +46,7 @@
         
         ![Untitled](https://downloader.disk.yandex.ru/preview/6f27e408cb1fc7eeb1469234aa902919a2684ad9ca887b4084064f78fd5acdca/6467cc17/QtYJLc54tgABG7PtEo5UZ1b7_7_2Fo8fH8bSeN238s46Ban9DUfI3UKeKiG2h2CB2icif1-Sif4fNytScBJ1ww%3D%3D?uid=0&filename=Untitled%20%282%29.png&disposition=inline&hash=&limit=0&content_type=image%2Fpng&owner_uid=0&tknv=v2&size=3840x1896)
         
-5. Сделать интерфейс ExaminerService с одним методом getQuestions.
+6. Сделать интерфейс ExaminerService с одним методом getQuestions.
     
     Этот интерфейс должен содержать один метод, который вернет список вопросов.
     
@@ -54,7 +54,7 @@
         
         ![Untitled](https://downloader.disk.yandex.ru/preview/ea297e85ec9f26006f2369129a13e1f6457639b3ffaeabbbdf712d6439bcc1e7/6467cc48/gyTS8saa2q3MmDZi_wi_UVb7_7_2Fo8fH8bSeN238s5AwBwnrs810jvo3bKpfD7cZtFO5MOFoJKzLWbRPU_QXA%3D%3D?uid=0&filename=Untitled%20%283%29.png&disposition=inline&hash=&limit=0&content_type=image%2Fpng&owner_uid=0&tknv=v2&size=3840x1896)
         
-6. Реализовать ExaminerServiceImpl, который является реализацией интерфейса из прошлого шага. Данный сервис должен внутри себя хранить поля типа QuestionService.
+7. Реализовать ExaminerServiceImpl, который является реализацией интерфейса из прошлого шага. Данный сервис должен внутри себя хранить поля типа QuestionService.
     
     Его задача: создать коллекцию и заполнить её с помощью вызова getRandomQuestion у QuestionService случайными вопросами. 
     
@@ -66,11 +66,11 @@
         
         ![Untitled](https://downloader.disk.yandex.ru/preview/915267eb6c1eb5944119f561fe9ac5f54e6b1c155827a46fbabe96d2f5c76c1d/6467cd69/HXXK3JGF4-pHH7QlKGowRVb7_7_2Fo8fH8bSeN238s7KaNkg4ddxBZVdCiQ1qLhjqNCbKlONzMg5hKqbA7RA0w%3D%3D?uid=0&filename=Untitled%20%286%29.png&disposition=inline&hash=&limit=0&content_type=image%2Fpng&owner_uid=0&tknv=v2&size=3840x1896)
         
-7. Реализовать контроллер ExamController с одним методом getQuestions(int amount).
+8. Реализовать контроллер ExamController с одним методом getQuestions(int amount).
     
     Контроллер должен обратиться к ExaminerService, получить от сервиса коллекцию вопросов и вернуть пользователю.
     
-8. Покрыть юнит-тестами JavaQuestionService и ExaminerServiceImpl (потребуется мок).
+9. Покрыть юнит-тестами JavaQuestionService и ExaminerServiceImpl (потребуется мок).
 
 - **Критерии оценки курсовой** (только базовый обязательный уровень):
     - Использованы все методы, указанные в архитектуре
