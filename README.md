@@ -15,12 +15,12 @@
 1. Реализовать сущность Question с двумя полями: question и answer. Данная сущность будет использоваться в качестве хранителя данных по вопросу.
     - Архитектура
    
-        ![Untitled1](https://3.downloader.disk.yandex.ru/preview/a10de352666bc73da8477b6ffedb8e929878a3032f06f66bde1efeb1b78c89b4/inf/IDaLvcL_rPBrTMPqZ6c9VVPxudwH2uIMRCwd0E60IeyoLW1neVK_gquTtQf-ImdcWWw980Z0toipdL5_g65vug%3D%3D?uid=721897240&filename=Untitled.png&disposition=inline&hash=&limit=0&content_type=image%2Fpng&owner_uid=721897240&tknv=v2&size=3817x1981)
+        ![Untitled](https://3.downloader.disk.yandex.ru/preview/a10de352666bc73da8477b6ffedb8e929878a3032f06f66bde1efeb1b78c89b4/inf/IDaLvcL_rPBrTMPqZ6c9VVPxudwH2uIMRCwd0E60IeyoLW1neVK_gquTtQf-ImdcWWw980Z0toipdL5_g65vug%3D%3D?uid=721897240&filename=Untitled.png&disposition=inline&hash=&limit=0&content_type=image%2Fpng&owner_uid=721897240&tknv=v2&size=3817x1981)
         
 3. Сделать интерфейс QuestionService, который будет содержать в себе все методы по работе с вопросами определенного предмета.
     - Архитектура
         
-        ![diagram-17353247503607978677.png](https://downloader.disk.yandex.ru/preview/e6c73a7ba4fc131aae0437000bb73c878860a3af827bf0c3bc800c8bbf02140c/6467cae3/1oi8r3TEWm9OtEPcYeKZN1b7_7_2Fo8fH8bSeN238s53Ofy7q0k_7cBovdY__Mml9nca730aUMgxzo7fZ78T7A%3D%3D?uid=0&filename=diagram-17353247503607978677.png&disposition=inline&hash=&limit=0&content_type=image%2Fpng&owner_uid=0&tknv=v2&size=3840x1896)
+        ![diagram-17353247503607978677.png](https://3.downloader.disk.yandex.ru/preview/e6c73a7ba4fc131aae0437000bb73c878860a3af827bf0c3bc800c8bbf02140c/6467cae3/1oi8r3TEWm9OtEPcYeKZN1b7_7_2Fo8fH8bSeN238s53Ofy7q0k_7cBovdY__Mml9nca730aUMgxzo7fZ78T7A%3D%3D?uid=0&filename=diagram-17353247503607978677.png&disposition=inline&hash=&limit=0&content_type=image%2Fpng&owner_uid=0&tknv=v2&size=3840x1896)
         
 4. Реализовать сервис JavaQuestionService, который будет реализовывать QuestionService и хранить в себе список вопросов по Java, а также осуществлять всю работу с этим списком.
     
