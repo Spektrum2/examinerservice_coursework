@@ -28,7 +28,7 @@
     
     - Архитектура
         
-        ![Untitled](https://downloader.disk.yandex.ru/preview/1dd66ba8d11f1d6ce7b1927e7a73e5715764083131dc660d19dd1b9c08e6b9fd/64a42574/QtYJLc54tgABG7PtEo5UZ1b7_7_2Fo8fH8bSeN238s46Ban9DUfI3UKeKiG2h2CB2icif1-Sif4fNytScBJ1ww%3D%3D?uid=0&filename=Untitled%20%282%29.png&disposition=inline&hash=&limit=0&content_type=image%2Fpng&owner_uid=0&tknv=v2&size=2048x2048)
+        ![Untitled](https://downloader.disk.yandex.ru/preview/9637235b148722324223c73d281e33d4a485bddc2748a20d6f3a4916be913eb5/64a42ad9/tHqlcpf8PYiMhx85xOHKGlb7_7_2Fo8fH8bSeN238s7fqvmj2ne_zv8O9xp3o79385ceql9uq76cd4lJM-T-IA%3D%3D?uid=0&filename=Untitled%20%281%29.png&disposition=inline&hash=&limit=0&content_type=image%2Fpng&owner_uid=0&tknv=v2&size=2048x2048)
         
 4. Реализовать контроллер JavaQuestionController, который будет предоставлять возможность пользователю добавлять, просматривать и удалять вопросы по Java в соответствующем QuestionService.
     
@@ -44,7 +44,7 @@
     
     - Архитектура
         
-        ![Untitled](https://downloader.disk.yandex.ru/preview/6f27e408cb1fc7eeb1469234aa902919a2684ad9ca887b4084064f78fd5acdca/6467cc17/QtYJLc54tgABG7PtEo5UZ1b7_7_2Fo8fH8bSeN238s46Ban9DUfI3UKeKiG2h2CB2icif1-Sif4fNytScBJ1ww%3D%3D?uid=0&filename=Untitled%20%282%29.png&disposition=inline&hash=&limit=0&content_type=image%2Fpng&owner_uid=0&tknv=v2&size=3840x1896)
+        ![Untitled](https://downloader.disk.yandex.ru/preview/f019c180bd53875cadca76130956182b912f834065b9dc8dddf94cec9a659888/64a42b01/QtYJLc54tgABG7PtEo5UZ1b7_7_2Fo8fH8bSeN238s46Ban9DUfI3UKeKiG2h2CB2icif1-Sif4fNytScBJ1ww%3D%3D?uid=0&filename=Untitled%20%282%29.png&disposition=inline&hash=&limit=0&content_type=image%2Fpng&owner_uid=0&tknv=v2&size=2048x2048)
         
 5. Сделать интерфейс ExaminerService с одним методом getQuestions.
     
