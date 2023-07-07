@@ -1,0 +1,29 @@
+GET http://localhost:8080/exam/get/10
+###
+GET http://localhost:8080/exam/java
+###
+GET http://localhost:8080/exam/java/add?question=Сколько километров в одной миле?&answer=1,6 км.
+###
+GET http://localhost:8080/exam/java/add?question=На какой вопрос не могу получить ответ Гамлет?&answer=Быть или не быть?
+###
+GET http://localhost:8080/exam/java/remove?question=На какой вопрос не могу получить ответ Гамлет?&answer=Быть или не быть?
+###
+GET http://localhost:8080/exam/java/find?question=На какой вопрос не могу получить ответ Гамлет?&answer=Быть или не быть?
+###
+GET http://localhost:8080/exam/java/find?question=Какова роль и правила написания оператора выбора (switch)?&answer=Оператор switch сравнивает аргумент на равенство с предложенным значением. Обязательно необходимо ставить break; после завершения тело команды, иначе будет продолжаться выполнение ниже по строчкам.
+###
+GET http://localhost:8080/exam/math
+###
+GET http://localhost:8080/exam/math/add?question=Сколько километров в одной миле?&answer=1,6 км.
+###
+GET http://localhost:8080/exam/math/add?question=На какой вопрос не могу получить ответ Гамлет?&answer=Быть или не быть?
+###
+GET http://localhost:8080/exam/math/remove?question=На какой вопрос не могу получить ответ Гамлет?&answer=Быть или не быть?
+###
+GET http://localhost:8080/exam/math/find?question=На какой вопрос не могу получить ответ Гамлет?&answer=Быть или не быть?
+###
+GET http://localhost:8080/exam/math/find?question=Решить двойное неравенство 4 < 3 - 2x <= 9&answer=[-3; -0.5)
+###
+GET http://localhost:8080/exam/math/find?question=Найти нули функции y = x² - 8x + 12&answer=x = 2; x = 6
+###
+GET http://localhost:8080/exam/math/find?question=Найти значение выражения a²(b+c), если a = 4, b = -7, c = 2&answer=–80
